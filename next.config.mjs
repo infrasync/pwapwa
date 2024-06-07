@@ -4,8 +4,20 @@ import nextIntlPlugin from 'next-intl/plugin';
 import { createSecureHeaders } from 'next-secure-headers';
 import remarkGfm from 'remark-gfm';
 import million from 'million/compiler';
+import withPWAInit from '@ducanh2912/next-pwa';
 
 const hostnames = ['localhost:3000', 'roniar.dev'];
+
+const withPWA = withPWAInit({
+  dest: 'public',
+  cacheOnFrontEndNav: true,
+  aggressiveFrontEndNavCaching: true,
+  reloadOnOnline: true,
+  disable: false,
+  workboxOptions: {
+    disableDevLogs: true,
+  },
+});
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -68,4 +80,4 @@ const withNextIntl = nextIntlPlugin('./src/i18n/server.ts');
 /**
  * Send the config to server while build or lint.
  */
-export default withNextIntl(withMDX(million.next(nextConfig)));
+export default withPWA(withNextIntl(withMDX(million.next(nextConfig))));

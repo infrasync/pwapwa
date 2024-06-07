@@ -28,6 +28,7 @@
     "lint:strict": "eslint --max-warnings=0 src"
   },
   "dependencies": {
+    "@ducanh2912/next-pwa": "^10.2.7",
     "@mantine/core": "^7.9.2",
     "@mantine/hooks": "^7.9.2",
     "@mantine/nprogress": "^7.9.2",
@@ -42,6 +43,8 @@
     "@vanilla-extract/css": "^1.13.0",
     "@vercel/og": "^0.6.2",
     "chalk": "4.1.2",
+    "dexie": "^4.0.7",
+    "dexie-react-hooks": "^1.1.7",
     "geist": "^1.1.0",
     "million": "^3.0.6",
     "next": "^14.2.3",
@@ -53,9 +56,10 @@
     "path-kanri": "^0.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-hook-form": "^7.51.5",
     "remark-gfm": "^4.0.0",
     "xstate": "^4.38.2",
-    "zod": "^3.22.4",
+    "zod": "^3.23.8",
     "zustand": "^4.4.2",
     "zustand-middleware-xstate": "^2.1.1"
   },

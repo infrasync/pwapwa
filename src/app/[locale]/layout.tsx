@@ -39,7 +39,11 @@ export default async function LocaleLayout({
         />
       </head>
       <body className={GeistSans.className}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider
+          locale={locale}
+          messages={messages}
+          timeZone="Asia/Jakarta"
+        >
           <ReactQueryProviders>
             <MantineProvider theme={theme}>
               <NavigationProgress aria-label="Progress Load Bar" />
